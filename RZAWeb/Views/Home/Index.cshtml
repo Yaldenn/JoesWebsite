@@ -1,0 +1,162 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to RZA!</h1>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<div class="row">
+    <div class="col-md-9">
+        <img src="~/Images/Lions_On_Rock.jpg" width="70%" height="100%" alt="An image of a group of lions lying on a rock" />
+    </div>
+    <div class="col-md-3">
+        <div class="align-content-center">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <p>Enjoy a fun day out at the zoo. Come and see our fun attractions and wide range of wildlife!</p>
+            <br />
+            <div class="align-content-center">
+                <a asp-area="" asp-controller="BookZooTickets" asp-action="Create">
+                    <button class="btn btn-primary">
+                        Book Now!
+                    </button>  
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-md-3">
+        <div class="align-content-center">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <p>Join us for a stay at our luxury hotel, with beautiful views over the zoo there is so much to offer.</p>
+            <br />
+            <div class="align-content-center">
+                <a asp-area="" asp-controller="BookZooTickets" asp-action="Create">
+                    <button class="btn btn-primary">
+                        Book Now!
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9 ">
+        <div>
+            <img src="~/Images/Hotel_Room.jpg" width="70%" height="100%" style="float: right" alt="An image of a tidy hotel room" />
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="row">
+    <div class="col-md-9">
+        <img src="~/Images/Elephant.jpg" width="70%" height="100%" alt="An image of many people observing an elephant" />
+    </div>
+    <div class="col-md-3">
+        <div class="align-content-center">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <p>There are many things to do at our zoo, including animal tours, feeding animals and activities such as rock climbing!</p>
+            <br />
+            <div class="align-content-center">
+                <a asp-area="" asp-controller="BookZooTickets" asp-action="ZooInformation">
+                    <button class="btn btn-primary">
+                        Find out more!
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-md-3">
+        <div class="align-content-center">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <p>Find out about our what our educational visits can offer, as over 100 schools have trusted RZA as the best location for thier school trip.</p>
+            <br />
+            <div class="align-content-center">
+                <a asp-area="" asp-controller="BookZooTickets" asp-action="EducationalVisits">
+                    <button class="btn btn-primary">
+                        Find out more!
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div>
+            <img src="~/Images/Feeding_Herring.jpg" width="70%" height="100%" style="float: right" alt="" />
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        height: 70px;
+        position: relative;
+        width: 50%;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+    }
+
+    .right {
+        display: flex;
+        justify-content: right;
+        align-items: self-end;
+        height: 70px;
+    }
+</style>

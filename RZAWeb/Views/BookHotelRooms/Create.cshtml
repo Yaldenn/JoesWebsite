@@ -1,0 +1,91 @@
+﻿@model RZAWeb.Models.BookHotelRooms
+<br />
+<br />
+<br />
+<h1 style="text-align:center">Book hotel rooms</h1>
+<br />
+<br />
+<br />
+<hr />
+<br />
+<br />
+<form asp-action="BookingConfirmed">
+    <div class="card border-dark mb-5" style="max-width: 6000rem;">
+        <div class="card-body">
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-5 offset-1">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <br />
+                        <br />
+                        <h5 style="text-align:center">Please select the date of your booking</h5>
+                        <input asp-for="BookingDate" class="form-control" min="@DateTime.Now/>
+                        <span asp-validation-for="BookingDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4 offset-1">
+                    <div class="card border-primary mb-4" style="max-width: 100rem;">
+                        <div class="card-body">
+                            <br />
+                            <h5 style="text-align:center">Please choose which rooms you would like to stay in</h5>
+                            <br />
+                            <div class="form-group">
+                                <label asp-for="FamilyRooms" class="control-label"></label>
+                                <input asp-for="FamilyRooms" class="form-control" />
+                                <span asp-validation-for="FamilyRooms" class="text-danger"></span>
+                                <p>£150 per night</p>
+                            </div>
+                            <br />
+                            <br />
+                            <div class="form-group">
+                                <label asp-for="DoubleRooms" class="control-label"></label>
+                                <input asp-for="DoubleRooms" class="form-control" />
+                                <span asp-validation-for="DoubleRooms" class="text-danger"></span>
+                                <p>£100 per night</p>
+                            </div>
+                            <br />
+                            <br />
+                            <div class="form-group">
+                                <label asp-for="SingleRooms" class="control-label"></label>
+                                <input asp-for="SingleRooms" class="form-control" />
+                                <span asp-validation-for="SingleRooms" class="text-danger"></span>
+                                <p>£50 per night</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="container">
+                    <div class="center">
+                        <input type="submit" value="Confirm booking" class=" w-100 btn btn-lg btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<style>
+    .container {
+        height: 70px;
+        position: relative;
+        width: 50%;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+    }
+</style>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RZAWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/RZAWeb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="Custom-Body">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">RZAWeb</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index" style="color:#772953">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:#772953">Zoo</div>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-area="" asp-controller="BookZooTickets" asp-action="Create">Zoo booking</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="BookZooTickets" asp-action="ZooInformation">Zoo Information</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="BookZooTickets" asp-action="EducationalVisits">Educational visits</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:#772953">Hotel</div>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-area="" asp-controller="BookHotelRooms" asp-action="Create">Hotel booking</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="BookHotelRooms" asp-action="HotelInformation">Hotel information</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+        <!--These line breaks are a temporary solution for the footer overlapping on content-->
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+
+    <footer class="border-top footer text-muted" style="background-color:#E95420;">
+        <div class="row">
+            <div class="col-md-1 offset-2">
+                <div class="container" style="padding-top:33px">
+                    &copy; 2024 - RZAWeb
+                    <br />
+                    <a asp-area="" asp-controller="Home" asp-action="LegalInformation" style="color:black; text-decoration:underline">Legal Information</a>
+                    <br />
+                    <a asp-area="" asp-controller="Home" asp-action="Termsandconditions" style="color:black; text-decoration:underline">Terms and conditions</a>
+                </div>
+            </div>
+            <div style="padding-top: 50px" class="col-md-2 offset-1">
+                <p style="text-align:center">
+                    Where to find us:
+                </p>
+                <p style="text-align:center">
+                    100 Street Country City
+                </p>
+            </div>
+            <div class="col-md-1" style="padding-top:23px">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.7967596389467!2d-0.15600522219601426!3d51.535287471819686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ad73297f857%3A0xb1723f26e03c12a8!2sLondon%20Zoo!5e0!3m2!1sen!2suk!4v1713518511272!5m2!1sen!2suk" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google maps interactive zoom map of the zoo"></iframe>
+            </div>
+            <div class="col-md-2 offset-1">
+                <p style="text-align:center">Contact us:</p>
+                <div class="container">
+                    <div class="center">
+                        <a style="padding-right:7px; color:black; text-decoration:underline;" asp-area="" asp-controller="Home" asp-action="LegalInformation">Instagram</a> ‎
+                        <a style="padding-right:7px; color:black; text-decoration:underline;" asp-area="" asp-controller="Home" asp-action="LegalInformation">Meta</a> ‎
+                        <a style="padding-right:7px; color:black; text-decoration:underline;" asp-area="" asp-controller="Home" asp-action="LegalInformation">Youtube</a>  ‎
+                        <a asp-area="" asp-controller="Home" asp-action="LegalInformation">X</a> ‎
+                    </div>
+                </div>
+                <p style="text-align:center">Email address: RZA@Rza.com</p>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+<style>
+    .container {
+        height: 70px;
+        position: relative;
+        width: 50%;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+    }
+</style>

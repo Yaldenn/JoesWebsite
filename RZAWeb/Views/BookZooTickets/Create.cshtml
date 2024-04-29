@@ -1,0 +1,83 @@
+﻿@model RZAWeb.Models.BookZooTickets
+<br />
+<br />
+<br />
+<h1 style="text-align:center">Book Zoo Tickets</h1>
+<br />
+<br />
+<br />
+<hr />
+<br />
+<br />
+<!--This will send users to the booking confirmed page-->
+<form asp-action="BookingConfirmed">
+    <div class="card border-dark mb-5" style="max-width: 6000rem;">
+        <div class="card-body">
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-5 offset-1">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <br />
+                        <br />
+                        <h5 style="text-align:center">Please select the date of your booking</h5>
+                        <input asp-for="BookingDate" class="form-control" />
+                        <span asp-validation-for="BookingDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4 offset-1">
+                    <div class="card border-primary mb-4" style="max-width: 100rem;">
+                        <div class="card-body">
+                            <br />
+                            <h5 style="text-align:center">Enter the number of tickets you would like to purchase</h5>
+                            <br />
+                            <div class="form-group">
+                                <label asp-for="ChildTickets" class="control-label"></label>
+                                <input asp-for="ChildTickets" class="form-control" />
+                                <span asp-validation-for="ChildTickets" class="text-danger"></span>
+                                <p>£9.99 each</p>
+                            </div>
+
+                            <br />
+                            <br />
+                            <div class="form-group">
+                                <label asp-for="AdultTickets" class="control-label"></label>
+                                <input asp-for="AdultTickets" class="form-control" />
+                                <span asp-validation-for="AdultTickets" class="text-danger"></span>
+                                <p>£14.99 each</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="container">
+                    <div class="center">
+                        <input type="submit" value="Confirm booking" class=" w-100 btn btn-lg btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<style>
+    .container {
+        height: 70px;
+        position: relative;
+        width: 50%;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+    }
+</style>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

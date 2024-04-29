@@ -1,0 +1,61 @@
+﻿@page
+@model RewardsModel
+@{
+    ViewData["Title"] = "Rewards";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+}
+
+<h3>@ViewData["Title"]</h3>
+<div class="col-md-12">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 style="text-align:center">Total Points:</h1>
+    <br />
+    <br />
+    <!--Displays the users reward points-->
+    <h3 style="text-align:center">@Model.UserRewardPoints</h3>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="row">
+    <h2>Spend</h2>
+    <!--The reason for .Take(3) is to not have them overlap below each other-->
+    @foreach (var reward in Model.Rewards.Take(3))
+    {
+        <div class="col-md-4">
+            <!--Clicking anywhere in this card will take the users to the details of the reward, where it can be redeemed -->
+            <a asp-area="" asp-controller="Rewards" asp-action="Details" asp-route-id="@reward.Id">
+                <div class="card border-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <!--Display all the information-->
+                        <h4 class="card-title">@Model.RewardName</h4>
+                        <b>@reward.RewardPoints Points</b>
+                        <br />
+                        <br />
+                        <p class="card-text">@reward.RewardDescription</p>
+                        <!--You should use reward.RewardImage here but for some reason the image was not displaying correctly, for now all the images will be the same-->
+                        <img src="~/Images/Giraffe.jpg" width="100%" height="100%"></img>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

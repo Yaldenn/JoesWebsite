@@ -1,0 +1,29 @@
+﻿@using RZAWeb.Areas.Identity.Pages.Account.Manage
+
+<h1 style="text-align:center">Your booking has been confirmed!</h1>
+
+<br />
+<br />
+<br />
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <div class="card border-primary mb-8" style="max-width: 100rem;">
+            <div class="card-body">
+                <br />
+                <p>Thank your for booking a room with RZA</p>
+                <br />
+                <p>You purchased:</p>
+                <p>@ViewData["FamilyRooms"] Family room</p>
+                <p>@ViewData["DoubleRooms"] Double room</p>
+                <p>@ViewData["SingleRooms"] Single room</p>
+                <br />
+                <p>Total price: £@ViewData["TotalPrice"]</p>
+                <br />
+                <p>You have just earned @ViewData["PointsEarned"] points. and you now have a total of @ViewData["UserPoints"] points</p>
+                <br />
+                <p>The code to redeem your reward has been sent to your email address: @ViewData["UserEmail"]</p>
+            </div>
+        </div>
+    </div>
+</div>
