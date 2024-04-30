@@ -36,6 +36,7 @@ update-database -context applicationdbcontext
 
 The project should now be set up, run the website by pressing F5 or clicking the big green triangle at the top of the page.
 
+You will need to create an account to use some of the features, for this you can use a fake email such as test@test.com
 
 ## More information:
 This was developed over a 30-hour period split across 4 weeks alongside documenting it and creating test logs. I was allowed access to the internet during this time, but was not allowed to take this project out of the exam and work on it at home or bring anything into the exam. To make this website i used Asp.net MVC. There are many things I would change about this website, but just did not have enough time for.
