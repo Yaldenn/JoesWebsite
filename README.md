@@ -13,15 +13,15 @@ The forms do not overlap, so you can do both if you wish.
 
 While filling out the non-technical form, you should focus on one to two specific sections of the website (for example the hotel booking system or the information pages), and should just leave blank or worry less about the details for the other pages and sections since there are too many questions to feasibly answer all of them to a good standard without it taking hours.
 
-The sections to choose from include
- - layout  
- - home page  
- - zoo ticket booking    
- - hotel room booking   
- - information pages   
- - legal pages   
- - rewards system   
- - profile pages   
+The sections to choose from include:
+ - Layout  
+ - Home page  
+ - Zoo ticket booking    
+ - Hotel room booking   
+ - Information pages   
+ - Legal pages   
+ - Rewards system   
+ - Profile pages   
 
 
 ## How to set up the website on your device:
