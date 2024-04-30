@@ -41,7 +41,7 @@ Run these four commands by copying and pasting them into the Console and pressin
 
 add-migration WorkingMigration -context rzawebcontext  
 update-database -context rzawebcontext  
-add migration WorkingAspMigration -context applicationdbcontext  
+add-migration WorkingAspMigration -context applicationdbcontext  
 update-database -context applicationdbcontext  
 
 The project should now be set up, run the website by pressing F5 or clicking the big green triangle at the top of the page.
