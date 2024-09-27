@@ -1,31 +1,3 @@
-## General information
-
-Hello, thank you for being happy to help with feedback for my exams, I really appreciate it.  
-
-You will need to download this project onto your device, instructions for this are at the bottom of this page.  
-
-### The feedback form:  
-The form can be found [Here](https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__XoDxItUOTYwTkNXOVJVVjJQREpaU0JHN0VOMlo5Vi4u)  
-
-
-While filling out the form, do not worry about writing something for all the inputs, many of them are unnecessary and can be skipped if you cannot think of any feedback. 
-
-There are 52 total questions, in 11 different sections
-
-These sections include:
- - General information  
- - Layout  
- - Home page  
- - Zoo ticket booking    
- - Hotel room booking   
- - Information pages   
- - Legal pages   
- - Rewards system   
- - Profile pages   
- - Technical feedback  
- - Additional information 
-
-
 ## How to set up the website on your device:
 
 Open visual studio 2022
@@ -52,5 +24,3 @@ You will need to create an account to use some of the features, for this you can
 
 ## More information:
 This is a prototype for a fake company called Riget Zoo Adventures (RZA), which was developed over a 30-hour period split across 4 weeks alongside documenting it and creating test logs. I was allowed access to the internet during this time, but was not allowed to take this project out of the exam and work on it at home or bring anything into the exam. To make this website i used Asp.net MVC. There are many things I would change about this website, but just did not have enough time for.
-
-I hope all of this make sense and i look forward to seeing the responses
